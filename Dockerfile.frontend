@@ -1,5 +1,8 @@
+#base image
 FROM python:3.12-slim
+#working directory
 WORKDIR /app
+#copy requirements file and install dependencies
 COPY frontend/requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY frontend/ .

@@ -1,5 +1,6 @@
 services:
   api:
+    image: prasheshadk/ecommerce-shipping-delay-api:latest
     build:
       context: .
       dockerfile: Dockerfile
@@ -7,6 +8,7 @@ services:
       - "8000:8000"
 
   frontend:
+    image: prasheshadk/ecommerce-shipping-delay-frontend:latest
     build:
       context: .
       dockerfile: Dockerfile.frontend
